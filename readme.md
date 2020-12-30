@@ -78,8 +78,8 @@ Since I will not host a public instance of this bot, you will have to host your 
 Since the bot needs to continue to run if you log out, you can't just execute the Python file and leave. To keep the
 python instance with the bot running, I recomment using `screen`. Screen is an easy-to-use tool for most Linux and
 MacOS-Systems. To install it, use `sudo apt-get install screen`. Afterwards, you can use
-`screen -AmdS discordBot python3 /path/to/source/code/UtilBot.py` to create a new screen instance in detached state,
-with the name "discordBot", running the command `python3 /path/to/source/code/UtilBot.py`. If you want to see what's
+`screen -AmdS discordBot python3 /path/to/source/code/utilBot.py` to create a new screen instance in detached state,
+with the name "discordBot", running the command `python3 /path/to/source/code/utilBot.py`. If you want to see what's
 happening in the console of this hidden terminal, use `screen -x discordBot`, if you called the screen "discordBot"
 before. To detach again, press `CTRL + A`, then `CTRL + D`. To stop the bot, attach using `screen -x discordBot`, then
 press `CTRL + C`.
