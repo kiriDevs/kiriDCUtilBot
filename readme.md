@@ -1,6 +1,6 @@
 # kiriDCUtilBot
 A simple Discord bot written in Python, using [discord.py](https://discordpy.readthedocs.io), supposed to provide you
-with basic tools that can be of use on many discord servers, not depending on their type or purpose. Everyone is invited
+with basic tools that can be of use on many Discord servers, not depending on their type or purpose. Everyone is invited
 to comment on my code, report any mistakes / bugs or suggest new features, or even implement them themselves.
 
 
