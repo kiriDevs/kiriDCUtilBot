@@ -44,7 +44,7 @@ Since I will not host a public instance of this bot, you will have to host your 
 
 ### Automatically using pipenv
 - Run `pip install pipenv` to install the "pipenv" package from pip, if not already done
-- Do Step 2 ([Download the source code to your system](#download-the-source-code-to-your-system))
+- Do Step 3.2 ([Download the source code to your system](#download-the-source-code-to-your-system))
 - Run `pipenv install` to create a new virtual environment and have pipenv download all necessary packages automatically
   based on the `Pipfile.lock` inluded with the code.
 
