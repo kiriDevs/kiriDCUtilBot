@@ -40,7 +40,10 @@ Since I will not host a public instance of this bot, you will have to host your 
 
 ## Install all dependencies on your system
 ### Manually using pip
--- Dependencies following shortly --
+Dependency name | installation command       |
+--------------- | -------------------------- |
+discord.py      | `sudo pip install discord` |
+PyYAML          | `sudo pip install yaml`    |
 
 ### Automatically using pipenv
 - Run `pip install pipenv` to install the "pipenv" package from pip, if not already done
