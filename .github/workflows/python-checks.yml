@@ -1,0 +1,62 @@
+name: PythonChecks
+
+on: [push, pull_request]
+
+jobs:
+  codestyle:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out current repository state
+        uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+
+      - name: Install dev depencies using pipenv
+        run: |
+          cd ./python
+          pip install pipenv
+          pipenv install --deploy --dev
+
+      - name: Check import order with isort
+        run: |
+          cd ./python
+          pipenv run isort . --recursive --diff
+
+      - name: Check codestyle with black
+        run: |
+          cd ./python
+          pipenv run black --check .
+
+  linting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out current repository state
+        uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+
+      - name: Install dev depencies using pipenv
+        run: |
+          cd ./python
+          pip install pipenv
+          pipenv install --deploy --dev
+
+      - name: Lint using flake8
+        run: |
+          cd ./python
+
+          files=$(find . -type f -name "*.py")
+          for file in $files; do
+            pipenv run flake8 $file
+          done
+
+      - name: Lint using mypy
+        run: |
+          cd ./python
+          pipenv run mypy ../python
