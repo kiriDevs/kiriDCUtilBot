@@ -8,6 +8,13 @@ name = "pypi"
 pyyaml = "*"
 
 [dev-packages]
+black = "*"
+isort = "*"
+flake8 = "*"
+mypy = "*"
 
 [requires]
 python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true
