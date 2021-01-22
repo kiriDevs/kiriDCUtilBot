@@ -29,7 +29,7 @@ to comment on my code, report any mistakes / bugs or suggest new features, or ev
 # Hosting
 For the time being, I will not host a public instance of the Discord-Bot myself. Therefore, to use it, you have to 
 download the source code found in this repository to a machine that you want to host your own instance on. A simple
-[Raspberry Pi](https://raspberrypi.org) should be enough for most use cases. Since it comes with Python preinstalled and
+[Raspberry Pi](https://raspberrypi.org) should be enough for this use case. Since it comes with Python preinstalled and
 is very small, it is a great 24/7 computer to run things like this on.
 
 
