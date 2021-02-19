@@ -1,4 +1,14 @@
+# Ignoring pipenv Python Venv
 .venv
-.idea
 
-credentials.yml
+# Ignoring default IntelliJ IDEA platform project files (Python: PyCharm)
+.idea
+*.iml
+
+# Ignoring default Visual Studio Code project files
+.settings
+.project
+
+# Ignoring execution and tool caches
+*.pyc
+.mypy_cache
