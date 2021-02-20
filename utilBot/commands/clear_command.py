@@ -26,3 +26,6 @@ async def clear_command(ctx: Context, message_amount_string: str):
     await ctx.send(
         f"**Success**! Deleted {deleted_number} messages!", delete_after=3
     )
+
+    # Cleanup - Removing potentially larger variables from RAM
+    del deleted_messages
