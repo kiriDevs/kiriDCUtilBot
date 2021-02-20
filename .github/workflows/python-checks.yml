@@ -19,7 +19,7 @@ jobs:
           pip install pipenv
           pipenv install --deploy --dev
       - name: Check codestyle with black
-        run: pipenv run black --check -l 80 ./python
+        run: pipenv run black --check -l 80 ./utilBot
 
   sorted-imports:
     runs-on: ubuntu-latest
@@ -37,7 +37,7 @@ jobs:
           pip install pipenv
           pipenv install --deploy --dev
       - name: Check import order with isort
-        run: pipenv run isort ./python --recursive --diff
+        run: pipenv run isort ./utilBot --recursive --diff
 
   linting:
     runs-on: ubuntu-latest
@@ -56,7 +56,7 @@ jobs:
           pipenv install --deploy --dev
       - name: Lint using flake8
         run: |
-          files=$(find ./python -type f -name "*.py")
+          files=$(find ./utilBot -type f -name "*.py")
           for file in $files; do
             pipenv run flake8 $file
           done
@@ -76,4 +76,4 @@ jobs:
           pip install pipenv
           pipenv install --deploy --dev
       - name: Lint using mypy
-        run: pipenv run mypy --namespace-packages ./python
+        run: pipenv run mypy --namespace-packages ./utilBot
