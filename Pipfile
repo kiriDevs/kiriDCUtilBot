@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-"discord.py" = "*"
+discord = "*"
 pyyaml = "*"
 
 [dev-packages]
@@ -12,9 +12,7 @@ black = "*"
 isort = "*"
 flake8 = "*"
 mypy = "*"
-
-[requires]
-python_version = "3.7"
+"discord.py-stubs" = "*"
 
 [pipenv]
 allow_prereleases = true
