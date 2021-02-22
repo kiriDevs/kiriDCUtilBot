@@ -1,7 +1,7 @@
 from discord.ext.commands import Bot, Context
 from yaml import safe_load as load_yaml
 
-from utilBot.commands.clear_command import clear_command
+from commands.clear_command import clear_command
 
 with open("../config/credentials.yml", "r") as credential_file:
     AUTH_TOKEN: str = load_yaml(credential_file)["DISCORD_BOT_TOKEN"]
