@@ -11,6 +11,10 @@ with open("../config/config.yml", "r") as config_file:
     raw_prefix_with_space: str = raw_prefix + " "
     PREFIXES: tuple = (raw_prefix_with_space, raw_prefix)
 
+with open("../config/reactionroles.yml", "r", encoding="UTF-8") as reaction_role_file:
+    REACTION_DATA_TREE = load_yaml(reaction_role_file)
+    print(REACTION_DATA_TREE)
+
 bot: Bot = Bot(command_prefix=PREFIXES, case_insensitive=True)
 
 
