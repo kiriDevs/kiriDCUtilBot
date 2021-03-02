@@ -1,22 +1,24 @@
 # -*- coding: UTF-8 -*-
-from discord import (Client, Guild, Member, PartialEmoji,
-                     RawReactionActionEvent, Role)
+from typing import Optional
+
+from discord import Client, Guild, Member, RawReactionActionEvent, Role
 
 
 async def raw_reaction_add(
     payload: RawReactionActionEvent, data_tree: dict, client: Client
 ):
-    assert isinstance(payload.emoji, PartialEmoji)
+    assert isinstance(payload.emoji.name, str)
     emoji_name: str = payload.emoji.name
     message_id: int = payload.message_id
 
     if data_tree[message_id][emoji_name]:
         assert isinstance(payload.guild_id, int)
         guild_id: int = payload.guild_id
-        guild: Guild = client.get_guild(guild_id)
+        guild: Optional[Guild] = client.get_guild(guild_id)
+        assert isinstance(guild, Guild)
 
         grant_role_id: int = data_tree[message_id][emoji_name]
-        grant_role: Role = guild.get_role(grant_role_id)
+        grant_role: Optional[Role] = guild.get_role(grant_role_id)
 
         if isinstance(grant_role, Role):
             assert isinstance(payload.member, Member)
