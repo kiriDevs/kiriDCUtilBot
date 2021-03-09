@@ -4,7 +4,7 @@ from discord.ext.commands import Bot, Context
 from yaml import safe_load as load_yaml
 
 from utilBot.commands.clear_command import clear_command
-from utilBot.events.raw_reaction_add import raw_reaction_add
+from utilBot.events.reactions import raw_reaction_add, raw_reaction_remove
 
 with open("../config/credentials.yml", "r") as credential_file:
     AUTH_TOKEN: str = load_yaml(credential_file)["DISCORD_BOT_TOKEN"]
@@ -32,6 +32,11 @@ async def clear_chat(ctx: Context, message_amount_string: str):
 async def on_raw_reaction_add(payload: RawReactionActionEvent):
     global REACTION_DATA_TREE
     await raw_reaction_add(payload, REACTION_DATA_TREE, bot)
+
+
+async def on_raw_reaction_remove(payload: RawReactionActionEvent):
+    global REACTION_DATA_TREE
+    await raw_reaction_remove(payload, REACTION_DATA_TREE, bot)
 
 
 bot.run(AUTH_TOKEN)
