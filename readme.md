@@ -1,11 +1,12 @@
 # kiriDCUtilBot
+[![CodeFactor](https://www.codefactor.io/repository/github/kiridevs/kiridcutilbot/badge)](https://www.codefactor.io/repository/github/kiridevs/kiridcutilbot)
+<br>
 A simple Discord bot written in Python, using [discord.py](https://discordpy.readthedocs.io), supposed to provide you
 with basic tools that can be of use on many Discord servers, not depending on their type or purpose. Everyone is invited
 to comment on my code, report any mistakes / bugs or suggest new features, or even implement them themselves.
 
+---
 
-
-# Content
 1. [Key Features](#key-features)
 2. [Hosting](#hosting)
 3. [Setup instructions](#setup-instructions)
@@ -16,14 +17,13 @@ to comment on my code, report any mistakes / bugs or suggest new features, or ev
     3. [Configuration](#configuration)
 4. [Running the bot](#running-the-bot)
 
-
+---
 
 # Key Features
 - All configuration is saved per Discord-Server, allowing for use on multiple servers without hosting multiple instances
 - Configurable command prefix (Especially useful on larger servers with multiple bots)
 - Complete configurability of all settings per server 
 - Open Source
-
 
 
 # Hosting
