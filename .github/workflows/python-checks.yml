@@ -17,7 +17,7 @@ jobs:
       - name: Install dev depencies using pipenv
         run: |
           pip install pipenv
-          pipenv install --deploy --dev
+          pipenv install --deploy --dev --python 3.7
       - name: Check codestyle with black
         run: pipenv run black --check -l 80 ./utilBot
 
@@ -35,7 +35,7 @@ jobs:
       - name: Install dev dependencies using pipenv
         run: |
           pip install pipenv
-          pipenv install --deploy --dev
+          pipenv install --deploy --dev --python 3.7
       - name: Check import order with isort
         run: pipenv run isort ./utilBot --recursive --diff
 
@@ -53,7 +53,7 @@ jobs:
       - name: Install dev depencies using pipenv
         run: |
           pip install pipenv
-          pipenv install --deploy --dev
+          pipenv install --deploy --dev --python 3.7
       - name: Lint using flake8
         run: |
           files=$(find ./utilBot -type f -name "*.py")
@@ -74,6 +74,6 @@ jobs:
       - name: Install dev depencies using pipenv
         run: |
           pip install pipenv
-          pipenv install --deploy --dev
+          pipenv install --deploy --dev --python 3.7
       - name: Lint using mypy
         run: pipenv run mypy --namespace-packages ./utilBot
