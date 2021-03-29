@@ -20,9 +20,9 @@ to comment on my code, report any mistakes / bugs or suggest new features, or ev
 ---
 
 # Key Features
-- All configuration is saved per Discord-Server, allowing for use on multiple servers without hosting multiple instances
+<!-- - All configuration is saved per Discord-Server, allowing for use on multiple servers without hosting multiple instances --> <!-- not true (yet) -->
 - Configurable command prefix (Especially useful on larger servers with multiple bots)
-- Complete configurability of all settings per server 
+- Complete configurability of all settings <!-- per server --> <!-- not true (yet) -->
 - Open Source
 
 
